@@ -17,11 +17,7 @@ function ShowcaseCard({ project, index }: { project: Project; index: number }) {
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
     >
-      <Link
-        href={`/projects/${project.slug}`}
-        data-cursor-label="case study"
-        className="group block"
-      >
+      <Link href={`/projects/${project.slug}`} data-cursor-label="case study" className="group block">
         <ProjectPreview project={project} index={index} />
 
         {/* caption row */}

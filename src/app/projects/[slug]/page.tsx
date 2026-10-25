@@ -57,12 +57,18 @@ export default async function ProjectPage({
             <div className="flex gap-2">
               <Tag tone={project.status === "active" ? "accent" : "cyan"}>{project.status}</Tag>
             </div>
-            {project.visibility === "public" && project.links.length > 0 ? (
+            {project.links.length > 0 ? (
               <div className="flex flex-wrap gap-2">
                 {project.links.map((l) => {
                   const Icon = linkIcon[l.kind];
                   return (
-                    <LinkButton key={l.href} href={l.href} external variant="line" size="sm">
+                    <LinkButton
+                      key={l.href}
+                      href={l.href}
+                      external
+                      variant={l.kind === "demo" ? "primary" : "line"}
+                      size="sm"
+                    >
                       <Icon className="text-sm" />
                       {l.label}
                     </LinkButton>

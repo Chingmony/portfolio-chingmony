@@ -38,6 +38,8 @@ export interface Project {
   tagline: string;
   /** Short showcase category, e.g. "Cryptography Toolkit". Falls back to kind. */
   category?: string;
+  /** Screenshot of the real UI, shown in the preview card. In /public. */
+  preview?: string;
   kind: ProjectKind;
   status: ProjectStatus;
   /** Display year or range, e.g. "2025" or "2025 — present". */
@@ -63,6 +65,7 @@ export const projects: Project[] = [
   {
     slug: "cryptonexus",
     category: "Cryptography Toolkit",
+    preview: "/previews/cryptonexus.png",
     title: "CryptoNexus",
     tagline: "A hands-on cryptography toolkit — AES, RSA, hashing and password analysis",
     kind: "tool",
@@ -132,6 +135,7 @@ export const projects: Project[] = [
   {
     slug: "strokesense",
     category: "Security Awareness",
+    preview: "/previews/strokesense.png",
     title: "StrokeSense",
     tagline: "An interactive site that makes keylogging visible",
     kind: "platform",
@@ -336,6 +340,7 @@ export const projects: Project[] = [
   {
     slug: "virtual-lab-trainer",
     category: "Interactive Trainer",
+    preview: "/previews/virtual-lab-trainer.png",
     title: "Virtual Lab Trainer",
     tagline: "Seven interactive missions that build a security lab before you build it",
     kind: "platform",
@@ -466,6 +471,7 @@ export const projects: Project[] = [
   {
     slug: "gatherly",
     category: "Full-Stack Platform",
+    preview: "/previews/gatherly.png",
     title: "Gatherly",
     tagline: "Event operations with three-tier role-based access control",
     kind: "platform",
